@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  frontend:
+    image: nginx-frontend
+    build:
+      context: ./frontend
+    ports:
+      - "8080:8080"
+    networks:
+      - frontend
+    extra_hosts:
+      - "host.docker.internal.host-gateway"
+
+networks:
+  frontend:
