@@ -74,18 +74,6 @@ module.exports = {
       "as-needed",
       { requireReturnForObjectLiteral: true },
     ],
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        devDependencies: [
-          "**/stories/index.tsx",
-          "**/storybook/*",
-          "**/routes/Dev/BrazeIAM/index.tsx",
-          "**/__tests__/*",
-          "./scripts/*",
-        ],
-      },
-    ],
   },
   overrides: [
     {
