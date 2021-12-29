@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "isolatedModules": true,
+    "jsx": "react",
+    "noEmit": true,
+    "noUnusedLocals": true,
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": ["src/*", "*"]
+    },
+    "typeRoots": ["./node_modules/@types", "./@types"]
+  },
+  "exclude": ["node_modules"]
+}
