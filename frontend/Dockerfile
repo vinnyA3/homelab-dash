@@ -1,3 +1,4 @@
+# build stage
 FROM node:16.13.1 as build
 
 WORKDIR /app
@@ -12,6 +13,7 @@ COPY . .
 
 RUN npm run build
 
+# run stage 
 FROM nginx:1.21.4
 
 COPY ./nginx/nginx.conf /etc/nginx/conf.d/default.conf
