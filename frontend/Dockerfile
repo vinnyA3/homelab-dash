@@ -12,7 +12,7 @@ COPY . .
 
 RUN npm run build
 
-FROM nginx:latest
+FROM nginx:1.21.4
 
 COPY ./nginx/nginx.conf /etc/nginx/conf.d/default.conf
 
