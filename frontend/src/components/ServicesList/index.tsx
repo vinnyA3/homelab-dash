@@ -44,13 +44,11 @@ const ServiceBlock: React.JSX = ({
 }) => (
   <div className={classes.block}>
     <a href="http://photoprism.box" className={classes.blockLink}>
-      <div>
-        <img src={images[link]} alt="" className={classes.blockImage} />
-      </div>
+      <img src={images[link]} alt="" className={classes.blockImage} />
 
       <div>
         <h3 className={classes.blockName}>{name}</h3>
-        <p className={classes.blockDescription}>{description}</p>
+        <p>{description}</p>
       </div>
     </a>
   </div>
