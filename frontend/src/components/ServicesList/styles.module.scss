@@ -1,11 +1,16 @@
 .block {
-  aspect-ratio: 1 / 1;
-  padding: .8em;
+  display: grid;
 
   &List {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
     grid-gap: 1.2em;
+  }
+
+  &Content {
+    padding: .8em 0;
+    background-color: var(--color-primary-dark);
+    align-self: end;
   }
 
   &Image {
