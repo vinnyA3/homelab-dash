@@ -1,33 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+// global sass import -- see sass/readme.md for info
 import "./sass/index.scss";
 
-function App(): JSX.Element {
-  return (
-    <div className="wrapper">
-      <div className="profile-media">
-        <div className="profile-img">
-          <img
-            src={require("../public/assets/images/gura-pfp.jpg")}
-            alt="Gawr Gura PFP"
-          />
-        </div>
+import Wrapper from "./layout/Wrapper";
+import ServicesListView from "./components/ServicesList";
 
-        <h1>Hello From Gawr Gura</h1>
-        <p>This is my Homelab Page!</p>
-      </div>
-
-      <div>
-        <ul>
-          <li>
-            <a href="http://photoprism.box">PhotoPrism</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  );
-}
+const App: React.JSX = () => (
+  <Wrapper>
+    <ServicesListView />
+  </Wrapper>
+);
 
 const targetEl = document.getElementById("app");
 

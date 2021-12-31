@@ -1,0 +1,25 @@
+.block {
+  aspect-ratio: 1 / 1;
+  padding: .8em;
+
+  &List {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+    grid-gap: 1.2em;
+  }
+
+  &Image {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &Name {
+    display: block;
+    margin-bottom: .6em; 
+  }
+
+  &Link:hover > &Name{
+    text-decoration: underline;
+  }
+}
