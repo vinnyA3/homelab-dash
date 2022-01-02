@@ -4,7 +4,7 @@ services:
   frontend:
     image: nginx-frontend
     build:
-      context: ./frontend
+      context: ./frontend-v2
     ports:
       - "80:80"
     networks:
