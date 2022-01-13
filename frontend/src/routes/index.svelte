@@ -2,43 +2,53 @@
   // TODO: mock - remove after parse yml config
   const mockedServices = [
     {
-      description: 'Default Photo for Service - Gura',
-      src: 'images/gura-pfp.jpg',
+      description: 'Self-hosted, AI-powered photo application - Gawr Gura',
+      imageSrc: 'images/gura-pfp.jpg',
+      serviceLink: 'http://photoprism.box',
       name: 'PhotoPrism'
     },
     {
-      description: 'Default Photo for Service - Calliope',
-      src: 'images/calliope.pfp.jpg',
-      name: 'PhotoPrism'
+      description: 'Download eBooks from IRC Highway',
+      imageSrc: 'images/calliope.pfp.jpg',
+      serviceLink: 'http://openbooks.box',
+      name: 'Openbooks'
     },
     {
-      description: 'Default Photo for Service - Ame',
-      src: 'images/watson-pfp.jpg',
-      name: 'PhotoPrism'
+      description: 'Everyone\s Favorite Detective, Astronaut, Docter',
+      imageSrc: 'images/watson-pfp.jpg',
+      name: 'Amelia Watson'
     },
     {
-      description: 'Default Photo for Service - Kiara',
-      src: 'images/kiara-pfp.jpg',
-      name: 'PhotoPrism'
+      description: 'The undying Tenchou of KFP',
+      imageSrc: 'images/kiara-pfp.jpg',
+      name: 'Takanashi Kiara'
     },
     {
-      description: 'Default Photo for Service - Ina',
-      src: 'images/ina.png',
-      name: 'PhotoPrism'
+      description: 'The Ancient Ones\' star pupil',
+      imageSrc: 'images/ina.png',
+      name: 'Ninomae Ina\'nis'
     }
   ];
 </script>
 
 <main class="service-grid">
-  {#each mockedServices as { name, src, description } (src)}
+  {#each mockedServices as { name, imageSrc, serviceLink, description } (imageSrc)}
     <div class="service">
-      <a href="http://photoprism.box" class=".service__link">
-        <img {src} alt="image of {name}" class="service__image" />
+      {#if serviceLink}
+        <a href={serviceLink} class=".service__link">
+          <img src={imageSrc} alt="image of {name}" class="service__image" />
+          <div class="service__content">
+            <h3 class="service__name">{name}</h3>
+            <p>{description}</p>
+          </div>
+        </a>
+      {:else}
+        <img src={imageSrc} alt="image of {name}" class="service__image" />
         <div class="service__content">
           <h3 class="service__name">{name}</h3>
           <p>{description}</p>
         </div>
-      </a>
+      {/if}
     </div>
   {/each}
 </main>
