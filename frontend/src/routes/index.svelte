@@ -14,9 +14,10 @@
       name: 'Openbooks'
     },
     {
-      description: 'Everyone\s Favorite Detective, Astronaut, Docter',
+      description: 'Client/Server media player and global streaming service',
       imageSrc: 'images/watson-pfp.jpg',
-      name: 'Amelia Watson'
+      serviceLink: 'http://plex.box/web',
+      name: 'Plex Media Server'
     },
     {
       description: 'The undying Tenchou of KFP',
