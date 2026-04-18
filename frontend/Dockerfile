@@ -13,9 +13,11 @@ COPY . .
 
 RUN npm run build
 
-# run stage 
+# run stage
 FROM nginx:1.21.4
 
+RUN mkdir -p ./nginx/blocks/
+COPY ./nginx/blocks/* /etc/nginx/blocks/
 COPY ./nginx/nginx.conf /etc/nginx/conf.d/default.conf
 
 COPY ./nginx/fullchain.pem /usr/share/nginx/
