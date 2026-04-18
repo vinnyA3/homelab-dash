@@ -4,30 +4,32 @@
     {
       description: 'Self-hosted, AI-powered photo application - Gawr Gura',
       imageSrc: 'images/gura-pfp.jpg',
-      serviceLink: 'http://photoprism.box',
+      serviceLink: 'https://photoprism.home.box',
       name: 'PhotoPrism'
     },
     {
       description: 'Download eBooks from IRC Highway',
       imageSrc: 'images/calliope.pfp.jpg',
-      serviceLink: 'http://openbooks.box',
+      serviceLink: 'https://openbooks.home.box',
       name: 'Openbooks'
     },
     {
       description: 'Client/Server media player and global streaming service',
       imageSrc: 'images/watson-pfp.jpg',
-      serviceLink: 'http://plex.box/web',
+      serviceLink: 'https://plex.home.box',
       name: 'Plex Media Server'
     },
     {
-      description: 'The undying Tenchou of KFP',
+      description: 'Open Source media system',
       imageSrc: 'images/kiara-pfp.jpg',
-      name: 'Takanashi Kiara'
+      serviceLink: 'https://jellyfin.home.box/',
+      name: 'Jellyfin Server'
     },
     {
-      description: 'The Ancient Ones\' star pupil',
+      description: 'A centralized hub for multiple jellyfin servers',
       imageSrc: 'images/ina.png',
-      name: 'Ninomae Ina\'nis'
+      serviceLink: 'https://jellyswarrm.home.box/',
+      name: 'Jellyswarrm'
     }
   ];
 </script>

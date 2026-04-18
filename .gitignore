@@ -1,1 +1,5 @@
 dist
+
+# ca cert + key
+frontend/nginx/fullchain.pem
+frontend/nginx/cert-key.pem

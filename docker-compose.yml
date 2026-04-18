@@ -7,10 +7,12 @@ services:
       context: ./frontend
     ports:
       - "80:80"
+      - "443:443"
     networks:
       - frontend
     extra_hosts:
       - "host.docker.internal:172.17.0.1"
+    restart: unless-stopped 
 
 networks:
   frontend:

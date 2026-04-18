@@ -18,4 +18,7 @@ FROM nginx:1.21.4
 
 COPY ./nginx/nginx.conf /etc/nginx/conf.d/default.conf
 
+COPY ./nginx/fullchain.pem /usr/share/nginx/
+COPY ./nginx/cert-key.pem /usr/share/nginx/
+
 COPY --from=build /app/dist /usr/share/nginx/html
