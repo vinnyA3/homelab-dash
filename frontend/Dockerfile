@@ -16,6 +16,9 @@ RUN npm run build
 # run stage 
 FROM nginx:1.21.4
 
+RUN mkdir -p /etc/nginx/snippets
+COPY ./nginx/common-ssl.conf /etc/nginx/snippets/
+COPY ./nginx/common-proxy.conf /etc/nginx/snippets/
 COPY ./nginx/nginx.conf /etc/nginx/conf.d/default.conf
 
 COPY ./nginx/fullchain.pem /usr/share/nginx/
